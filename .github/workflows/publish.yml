@@ -23,11 +23,11 @@ jobs:
           deno-version: v1.x
 
       - name: Build the website
-        env:
-          BASE_URL: ${{ secrets.BASE_URL }}
-          REMOTE_FILE_ID: ${{ secrets.REMOTE_FILE_ID }}
-          REMOTE_FILE_URL: ${{ secrets.REMOTE_FILE_URL }}
-        run: deno task build
+        run: |
+          BASE_URL=${{ secrets.BASE_URL }} \
+          REMOTE_FILE_ID=${{ secrets.REMOTE_FILE_ID }} \
+          REMOTE_FILE_URL=${{ secrets.REMOTE_FILE_URL }} \
+          deno task build
 
       - name: Setup the website
         uses: actions/configure-pages@v5
