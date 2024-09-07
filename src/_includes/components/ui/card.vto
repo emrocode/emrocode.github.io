@@ -1,0 +1,13 @@
+<article class="card">
+  <div class="card-body">
+    <h3 class="card-title">
+      <a href="{{ project.url }}">{{ project.title }}</a>
+    </h3>
+    <p class="card-description">{{ project.description }}</p>
+  </div>
+  <div class="card-footer">
+    {{ for technologie of project.technologies }}
+    <span>{{ technologie.toLowerCase() |> simpleicons }}</span>
+    {{ /for }}
+  </div>
+</article>

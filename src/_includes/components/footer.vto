@@ -1,0 +1,23 @@
+<footer>
+  <div class="footer container">
+    <div>
+      <p>
+        &copy; {{ date.getFullYear() }} {{ data.about.name }} &lpar;{{ data.about.username }}&rpar;
+      </p>
+      <p>
+        Creado con
+        <a href="https://lume.land/" class="link">Lume</a>, desplegado en
+        <a href="https://pages.github.com/" class="link">GitHub</a>
+      </p>
+    </div>
+    <ul class="menu">
+      {{ for profile of data.profiles }}
+      <li class="menu-item">
+        <a href="{{ profile.url }}" class="menu-link">
+          {{ profile.platform }}
+        </a>
+      </li>
+      {{ /for }}
+    </ul>
+  </div>
+</footer>

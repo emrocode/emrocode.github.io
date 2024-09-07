@@ -1,0 +1,30 @@
+<header class="header">
+  <nav class="nav container">
+    <a href="/" class="nav-brand">
+      <picture>
+        <source type="image/webp" srcset="/media/avatar.webp" />
+        <source type="image/png" srcset="/media/avatar.png" />
+        <img
+          decoding="async"
+          src="/media/avatar.png"
+          onerror="this.onerror=null; this.remove();"
+          alt="Avatar de {{ data.about.name }}" />
+      </picture>
+    </a>
+    <!-- social links -->
+    <ul class="menu">
+      {{ for profile of data.profiles |> slice(0,3) }}
+      <li class="menu-item">
+        <a href="{{ profile.url }}" class="menu-link">
+          {{ include `icons/${profile.platform.toLowerCase()}.svg` }}
+        </a>
+      </li>
+      {{ /for }}
+      <li class="menu-item">
+        <button type="button" id="dTheme" class="button menu-link">
+          {{ include "icons/routine.svg" }}
+        </button>
+      </li>
+    </ul>
+  </nav>
+</header>
