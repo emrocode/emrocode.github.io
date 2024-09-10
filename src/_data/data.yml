@@ -5,7 +5,7 @@ about:
   name: Emilio Romero
   username: emrocode
   email: mailto:emrocode@gmail.com
-  summary: Desarrollador web frontend, radicado en 🇵🇾 Paraguay. Estudiante de Ingeniería Informática con experiencia en tecnologías modernas
+  summary: Desarrollador web en Paraguay 🇵🇾, estudiante de Ing. Informática 🎓, apasionado por las tecnologías modernas y la creación de soluciones web innovadoras
 profiles:
   - platform: LinkedIn
     url: https://linkedin.com/in/emrocode
@@ -13,8 +13,6 @@ profiles:
     url: https://github.com/emrocode
   - platform: CodePen
     url: https://codepen.io/emrocode
-  - platform: Bluesky
-    url: https://bsky.app/profile/emrocode.bsky.social
 projects:
   - createdAt: 2022-11-14T20:54:31Z
     url: https://github.com/emrocode/guarani-myths-api
