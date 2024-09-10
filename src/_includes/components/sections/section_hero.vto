@@ -4,4 +4,37 @@
     <p class="hero-summary">{{ data.about.summary }}</p>
     <a class="button hero-button" href="{{ data.about.email }}">Contactar</a>
   </div>
+  <style>
+    .hero-title {
+      font-size: clamp(var(--headline-3), 6vw, var(--headline-2));
+      font-weight: bold;
+      line-height: normal;
+      letter-spacing: -0.08rem;
+    }
+
+    .hero-summary {
+      max-width: calc(var(--max-w) / 1.25);
+      font-size: var(--font-mx);
+      text-wrap: pretty;
+      margin-top: 0.25rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero-description {
+      max-width: calc(var(--max-w) / 1.25);
+      text-wrap: pretty;
+    }
+
+    .hero-button {
+      display: flex;
+      column-gap: 0.25rem;
+      padding: 0.525rem 1.525rem;
+      color: var(--sdcolor);
+      background-color: var(--accolor);
+      border-radius: var(--border-xx);
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  </style>
 </section>

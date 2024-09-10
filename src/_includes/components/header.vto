@@ -27,4 +27,44 @@
       </li>
     </ul>
   </nav>
+  <style>
+    .header {
+      grid-area: header;
+    }
+
+    .nav {
+      height: var(--nav-h);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      & > .nav-brand {
+        display: flex;
+        align-items: center;
+        column-gap: 0.75rem;
+        & img {
+          width: 32px;
+          height: 32px;
+          border: 1px solid var(--border-color);
+          border-radius: var(--border-xx);
+        }
+      }
+    }
+
+    .menu,
+    .hero-menu {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      column-gap: 0.25rem;
+    }
+
+    .menu-link {
+      padding: 0.25rem;
+      display: block;
+      border-radius: var(--border-sm);
+      &:hover {
+        background-color: var(--sdcolor);
+      }
+    }
+  </style>
 </header>

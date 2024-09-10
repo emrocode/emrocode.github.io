@@ -1,0 +1,10 @@
+<section>
+  {{ set title = "Contribuciones" }}
+  {{ include "components/ui/headline.vto" { title } }}
+
+  <div class="wrapper block">
+    {{ for activity of data.activities }}
+    {{ include "components/ui/overview.vto" { activity } }}
+    {{ /for }}
+  </div>
+</section>

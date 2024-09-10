@@ -1,0 +1,35 @@
+<article class="activity">
+  <div class="activity-headline">
+    <h3 class="activity-title">
+      {{ activity.title }}
+      <a
+        class="activity-link"
+        href="{{ activity.url }}"
+        >{{ `(${activity.repository.owner}/${activity.repository.name})` }}</a
+      >
+    </h3>
+  </div>
+  <p class="activity-description">{{ activity.description }}</p>
+  <style>
+    .activity-title {
+      --space: 0.25rem;
+      font-weight: bold;
+      margin-bottom: var(--space);
+      display: flex;
+      gap: var(--space);
+      flex-wrap: wrap;
+    }
+
+    .activity-link {
+      color: var(--ttcolor);
+      &:is(:hover, :focus) {
+        text-decoration: underline;
+      }
+    }
+
+    .activity-description {
+      font-size: var(--font-sm);
+      text-wrap: pretty;
+    }
+  </style>
+</article>

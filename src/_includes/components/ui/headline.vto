@@ -1,3 +1,28 @@
 <h2 class="headline">
   {{ title }}
 </h2>
+<style>
+  .headline {
+    --gap: 1.25rem;
+    margin-bottom: calc(var(--nav-h) / 2);
+    color: var(--ttcolor);
+    display: flex;
+    align-items: center;
+  }
+
+  .headline:before,
+  .headline:after {
+    content: "";
+    height: 1px;
+    background-color: var(--border-color);
+    flex-grow: 1;
+  }
+
+  .headline:before {
+    margin-right: var(--gap);
+  }
+
+  .headline:after {
+    margin-left: var(--gap);
+  }
+</style>

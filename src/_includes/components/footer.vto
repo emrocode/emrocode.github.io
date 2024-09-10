@@ -20,4 +20,32 @@
       {{ /for }}
     </ul>
   </div>
+  <style>
+    footer {
+      padding: calc(var(--nav-h) / 1.5) 0;
+      grid-area: footer;
+    }
+
+    .footer {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: end;
+      justify-content: space-between;
+      gap: 1rem;
+      font-size: var(--font-sm);
+      & .menu {
+        gap: 0.75rem;
+        & .menu-link {
+          padding: 0;
+          color: var(--ttcolor);
+          text-decoration: underline var(--ttcolor);
+          &:hover {
+            color: var(--qncolor);
+            text-decoration-color: var(--qncolor);
+            background-color: transparent !important;
+          }
+        }
+      }
+    }
+  </style>
 </footer>

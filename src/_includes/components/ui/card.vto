@@ -10,4 +10,52 @@
     <span>{{ technologie.toLowerCase() |> simpleicons }}</span>
     {{ /for }}
   </div>
+  <style>
+    .card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: var(--space);
+      padding: var(--space);
+      background: linear-gradient(-45deg, var(--sdcolor) 0%, #0000 50%);
+      border: 1px solid var(--border-color);
+      border-radius: var(--border-md);
+      transition: transform var(--transition);
+      &:is(:focus, :hover) {
+        transform: translateY(-0.25rem);
+      }
+    }
+
+    .card-title {
+      font-size: var(--font-mx);
+      font-weight: bold;
+      margin-bottom: 0.25rem;
+      & > a::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+      }
+    }
+
+    .card-description {
+      font-size: var(--font-sm);
+      text-wrap: pretty;
+    }
+
+    .card-footer {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.25rem;
+      & > span {
+        display: block;
+        color: var(--ttcolor);
+        & > svg {
+          width: var(--font-lg);
+          height: var(--font-lg);
+          fill: currentColor;
+        }
+      }
+    }
+  </style>
 </article>
