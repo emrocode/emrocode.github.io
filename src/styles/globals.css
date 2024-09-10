@@ -98,7 +98,7 @@ main#container {
 }
 
 section {
-  margin-top: clamp(1.75rem, 14vmax, calc(var(--nav-h) * 1.25));
+  margin-top: clamp(1.75rem, 14vmax, var(--nav-h));
   margin-bottom: calc(var(--nav-h) * 1.75);
 }
 
@@ -128,118 +128,6 @@ svg {
   grid-area: main;
 }
 
-.button {
-  max-width: max-content;
-  font-family: inherit;
-  font-size: inherit;
-  display: block;
-  background-color: inherit;
-  cursor: pointer;
-  border: none;
-}
-
-/* navigation */
-.header {
-  grid-area: header;
-}
-
-.nav {
-  height: var(--nav-h);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  & > .nav-brand {
-    display: flex;
-    align-items: center;
-    column-gap: 0.75rem;
-    & img {
-      width: 32px;
-      height: 32px;
-      border: 1px solid var(--border-color);
-      border-radius: var(--border-xx);
-    }
-  }
-}
-
-.menu,
-.hero-menu {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  column-gap: 0.25rem;
-}
-
-.menu-link {
-  padding: 0.25rem;
-  display: block;
-  border-radius: var(--border-sm);
-  &:hover {
-    background-color: var(--sdcolor);
-  }
-}
-
-/* hero */
-.hero-title {
-  font-size: clamp(var(--headline-3), 6vw, var(--headline-2));
-  font-weight: bold;
-  line-height: normal;
-  letter-spacing: -0.08rem;
-}
-
-.hero-summary {
-  max-width: calc(var(--max-w) / 1.25);
-  font-size: var(--font-mx);
-  text-wrap: pretty;
-  margin-top: 0.25rem;
-  margin-bottom: 1.25rem;
-}
-
-.hero-description {
-  max-width: calc(var(--max-w) / 1.25);
-  text-wrap: pretty;
-}
-
-.hero-menu > li:first-of-type {
-  margin-right: 0.525rem;
-}
-
-.hero-button {
-  display: flex;
-  column-gap: 0.25rem;
-  padding: 0.525rem 1.525rem;
-  color: var(--sdcolor);
-  background-color: var(--accolor);
-  border-radius: var(--border-xx);
-  &:hover {
-    opacity: 0.8;
-  }
-}
-
-/* header */
-.headline {
-  --gap: 1.25rem;
-  margin-bottom: calc(var(--nav-h) / 2);
-  color: var(--ttcolor);
-  display: flex;
-  align-items: center;
-  &:before,
-  &:after {
-    content: "";
-    height: 1px;
-    background-color: var(--border-color);
-    flex-grow: 1;
-  }
-}
-
-.headline:before {
-  margin-right: var(--gap);
-}
-
-.headline:after {
-  margin-left: var(--gap);
-}
-
-/* projects */
 .wrapper {
   --space: 1.25rem;
   display: grid;
@@ -250,96 +138,12 @@ svg {
   }
 }
 
-.card {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: var(--space);
-  padding: var(--space);
-  background: linear-gradient(-45deg, var(--sdcolor) 0%, #ffff0000 80%);
-  border: 1px solid var(--border-color);
-  border-radius: var(--border-md);
-  transition: transform var(--transition);
-  &:is(:focus, :hover) {
-    transform: translateY(-0.25rem);
-  }
-}
-
-.card-title {
-  font-size: var(--font-mx);
-  font-weight: bold;
-  margin-bottom: 0.25rem;
-  & > a::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-  }
-}
-
-.card-description,
-.activity-description {
-  font-size: var(--font-sm);
-  text-wrap: pretty;
-}
-
-.card-footer {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.25rem;
-  & > span {
-    display: block;
-    color: var(--ttcolor);
-    & > svg {
-      width: var(--font-lg);
-      height: var(--font-lg);
-      fill: currentColor;
-    }
-  }
-}
-
-/* activities */
-.activity-title {
-  --space: 0.25rem;
-  font-size: var(--font-mx);
-  font-weight: bold;
-  margin-bottom: var(--space);
-  display: flex;
-  gap: var(--space);
-  flex-wrap: wrap;
-}
-
-.activity-link {
-  color: var(--ttcolor);
-  &:is(:hover, :focus) {
-    text-decoration: underline;
-  }
-}
-
-/* footer */
-footer {
-  padding: calc(var(--nav-h) / 1.5) 0;
-  grid-area: footer;
-}
-
-.footer {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: end;
-  justify-content: space-between;
-  gap: 1rem;
-  font-size: var(--font-sm);
-  & .menu {
-    gap: 0.75rem;
-    & .menu-link {
-      padding: 0;
-      color: var(--ttcolor);
-      text-decoration: underline var(--ttcolor);
-      &:hover {
-        color: var(--qncolor);
-        text-decoration-color: var(--qncolor);
-        background-color: transparent !important;
-      }
-    }
-  }
+.button {
+  max-width: max-content;
+  font-family: inherit;
+  font-size: inherit;
+  display: block;
+  background-color: inherit;
+  cursor: pointer;
+  border: none;
 }
