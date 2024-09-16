@@ -10,6 +10,7 @@
           onerror="this.onerror=null; this.remove();"
           alt="Avatar de {{ data.about.name }}" />
       </picture>
+      <span>{{ data.about.username }}</span>
     </a>
     <!-- social links -->
     <ul class="menu">
@@ -42,9 +43,11 @@
         align-items: center;
         column-gap: 0.75rem;
         & img {
-          width: 32px;
-          height: 32px;
-          border-radius: var(--border-sm);
+          width: 36px;
+          height: 36px;
+          padding: 2px;
+          background-color: var(--accolor);
+          border-radius: var(--border-xx);
         }
       }
     }

@@ -1,13 +1,13 @@
 <article class="activity">
-  <div class="activity-headline">
+  <div>
     <h3 class="activity-title">
       {{ activity.title }}
-      <a
-        class="activity-link"
-        href="{{ activity.url }}"
-        >{{ `(${activity.repository.owner}/${activity.repository.name})` }}</a
-      >
     </h3>
+    <a
+      class="activity-link"
+      href="{{ activity.url }}"
+      >{{ `${activity.repository.owner}/${activity.repository.name}` }}</a
+    >
   </div>
   <p class="activity-description">{{ activity.description }}</p>
   <style>
@@ -22,9 +22,11 @@
     }
 
     .activity-link {
+      font-size: var(--font-sm);
+      text-decoration: underline;
       color: var(--ttcolor);
       &:is(:hover, :focus) {
-        text-decoration: underline;
+        color: inherit;
       }
     }
 
