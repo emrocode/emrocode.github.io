@@ -1,3 +1,4 @@
+import "jsr:@std/dotenv/load";
 import lume from "lume/mod.ts";
 import plugins from "./plugins.ts";
 import { type Page } from "lume/types.ts";

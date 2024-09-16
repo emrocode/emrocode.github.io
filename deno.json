@@ -1,7 +1,7 @@
 {
   "imports": {
     "lume/": "https://deno.land/x/lume@v2.2.1/",
-    "lume_icon_plugins/": "https://deno.land/x/lume_icon_plugins@v0.2.3/"
+    "lume/icons/": "https://deno.land/x/lume_icon_plugins@v0.2.3/"
   },
   "tasks": {
     "lume": "echo \"import 'lume/cli.ts'\" | deno run -A -",

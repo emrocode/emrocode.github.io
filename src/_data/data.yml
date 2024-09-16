@@ -19,19 +19,18 @@ projects:
     title: Mitos Guaraníes
     description: RESTful API sobre los siete mitos guaranies, su historia e imágenes relacionadas
     technologies:
-      - TypeScript
       - Express
   - createdAt: 2022-11-25T13:57:23Z
     url: https://github.com/emrocode/darkify-js
     title: Darkify JS
-    description: 🌚 Librería sencilla para implementar un modo oscuro en cualquier sitio web
+    description: Librería sencilla para implementar un modo oscuro en cualquier sitio web
     technologies:
       - TypeScript
       - Rollupdotjs
   - createdAt: 2024-07-27T20:08:06Z
     url: https://github.com/emrocode/reactx
     title: Reactx
-    description: ⚡ Plantilla ágil y moderna para lanzar proyectos de React en segundos
+    description: Plantilla ágil y moderna para lanzar proyectos de React en segundos
     technologies:
       - React
       - Reactrouter

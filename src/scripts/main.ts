@@ -1,7 +1,7 @@
 import Darkify from "npm:darkify-js";
 
 const dMode = new Darkify("button#dTheme", {
-  useColorScheme: ["#ffffff", "#111111"],
+  useColorScheme: ["#f7f4e8", "#23211a"],
 });
 
 console.table(dMode.options);

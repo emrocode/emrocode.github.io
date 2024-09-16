@@ -3,7 +3,7 @@ import esbuild from "lume/plugins/esbuild.ts";
 import lightningcss from "lume/plugins/lightningcss.ts";
 import minify_html from "lume/plugins/minify_html.ts";
 import resolve_urls from "lume/plugins/resolve_urls.ts";
-import simple_icons from "lume_icon_plugins/simpleicons.ts";
+import simple_icons from "lume/icons/simpleicons.ts";
 import date from "lume/plugins/date.ts";
 import { es } from "npm:date-fns/locale/es";
 
