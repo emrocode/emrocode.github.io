@@ -48,53 +48,54 @@
   --border-xm: 1.25rem;
   --border-xx: 9999rem;
 
-  --accent-hue: 200;
+  --accent-hue: 45;
   --accent-lightness: 20%;
   --border-lightness: 0%;
   --alpha: 0.125;
 
-  --pmcolor: hsl(0, 0%, 100%);
-  --sdcolor: hsl(0, 0%, 97%);
-  --ttcolor: hsla(0, 0%, 40%);
-  --qtcolor: hsl(0, 0%, 30%);
-  --qncolor: hsl(0, 0%, 20%);
+  --pmcolor: hsl(var(--accent-hue), 50%, 94%);
+  --sdcolor: hsl(var(--accent-hue), 50%, 90%);
+  --ttcolor: hsl(var(--accent-hue), 20%, 36%);
+  --qtcolor: hsl(var(--accent-hue), 50%, 16%);
+  --qncolor: hsl(var(--accent-hue), 50%, 8%);
 
-  --accolor: hsl(var(--accent-hue), 100%, var(--accent-lightness));
+  --accolor: hsl(var(--accent-hue), 50%, var(--accent-lightness));
   --border-color: hsla(var(--accent-hue), 0%, var(--border-lightness), var(--alpha));
   --emphasize: hsla(var(--accent-hue), 100%, var(--accent-lightness), var(--alpha));
-  --transition: 300ms ease-in-out;
+  --transition: 250ms ease;
 }
 
 :root:is([data-theme="dark"]) {
-  --accent-hue: 25;
   --accent-lightness: 60%;
   --border-lightness: 100%;
 
-  --pmcolor: hsl(0, 0%, 12%);
-  --sdcolor: hsl(0, 0%, 20%);
-  --ttcolor: hsl(0, 0%, 70%);
-  --qtcolor: hsl(0, 0%, 94%);
-  --qncolor: hsl(0, 0%, 100%);
+  --pmcolor: hsl(var(--accent-hue), 16%, 12%);
+  --sdcolor: hsl(var(--accent-hue), 16%, 16%);
+  --ttcolor: hsl(var(--accent-hue), 25%, 72%);
+  --qtcolor: hsl(var(--accent-hue), 50%, 96%);
+  --qncolor: hsl(var(--accent-hue), 50%, 92%);
 }
 
 html,
 body {
+  min-height: 100vh;
   font-family: var(--font-sans);
   font-size: var(--font-md);
   line-height: 1.5;
   text-rendering: optimizeSpeed;
   color: var(--qncolor);
   background-color: var(--pmcolor);
-}
-
-main#container {
-  min-height: 100vh;
+  overflow-x: hidden;
   display: grid;
   grid:
     "header" auto
     "main" 1fr
     "footer" auto
     / 1fr;
+}
+
+main {
+  grid-area: main;
 }
 
 section {
@@ -125,7 +126,6 @@ svg {
   max-width: var(--max-w);
   width: 90%;
   margin: 0 auto;
-  grid-area: main;
 }
 
 .wrapper {
