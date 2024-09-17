@@ -20,13 +20,6 @@ projects:
     description: RESTful API sobre los siete mitos guaranies, su historia e imágenes relacionadas
     technologies:
       - Express
-  - createdAt: 2022-11-25T13:57:23Z
-    url: https://github.com/emrocode/darkify-js
-    title: Darkify JS
-    description: Librería sencilla para implementar un modo oscuro en cualquier sitio web
-    technologies:
-      - TypeScript
-      - Rollupdotjs
   - createdAt: 2024-07-27T20:08:06Z
     url: https://github.com/emrocode/reactx
     title: Reactx
@@ -35,15 +28,6 @@ projects:
       - React
       - Reactrouter
       - Tailwindcss
-  - createdAt: 2024-08-29T18:05:55Z
-    url: https://github.com/emrocode/react-auth0
-    title: React Auth0
-    description: Aplicación de muestra con autenticación de usuario usando Auth0 en React
-    technologies:
-      - React
-      - Auth0
-      - Tailwindcss
-      - Vercel
 activities:
   - createdAt: 2024-03-13T13:29:27Z
     repository:
