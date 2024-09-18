@@ -55,7 +55,7 @@
 
   --pmcolor: hsl(var(--accent-hue), 50%, 94%);
   --sdcolor: hsl(var(--accent-hue), 50%, 90%);
-  --ttcolor: hsl(var(--accent-hue), 20%, 35%);
+  --ttcolor: hsl(var(--accent-hue), 25%, 24%);
   --qtcolor: hsl(var(--accent-hue), 50%, 16%);
   --qncolor: hsl(var(--accent-hue), 50%, 8%);
 
