@@ -2,26 +2,30 @@
   <div>
     <h3 class="activity-title">
       {{ activity.title }}
-      <a
-        class="activity-link"
-        href="{{ activity.url }}"
-        >{{ `@${activity.repository.owner}/${activity.repository.name}` }}</a
-      >
     </h3>
+    <a
+      class="activity-link"
+      href="{{ activity.url }}"
+      >{{ `@${activity.repository.owner}/${activity.repository.name}` }}</a
+    >
   </div>
   <p class="activity-description">{{ activity.description }}</p>
   <style>
-    .activity-title {
+    .activity {
       --space: 0.25rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space);
+    }
+
+    .activity-title {
       font-size: var(--font-mx);
       font-weight: bold;
-      margin-bottom: var(--space);
-      display: flex;
-      gap: var(--space);
-      flex-wrap: wrap;
     }
 
     .activity-link {
+      font-size: var(--font-md);
+      font-weight: bold;
       color: var(--ttcolor);
       &:is(:hover, :focus) {
         color: inherit;
