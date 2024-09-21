@@ -2,67 +2,29 @@
   {{ set title = "Skills" }}
   {{ include "components/ui/headline.vto" { title } }}
   {{ set skills = ["React","Nextdotjs","Django","Tailwindcss","Express","Nodedotjs","PostgreSQL"] }}
-  <div class="skills-box" style="--w: 56px; --h: 48px; --q: {{ skills.length }};">
-    <ul class="skills">
-      {{ for i, skill of skills }}
-      <li class="skills-item" style="--p: {{ Number(i) + 1 }};">
-        {{ skill.toLowerCase() |> simpleicons }}
-      </li>
-      {{ /for }}
-    </ul>
-  </div>
+  <ul class="skills">
+    {{ for skill of skills }}
+    <li class="skills-item">
+      {{ skill.toLowerCase() |> simpleicons }}
+    </li>
+    {{ /for }}
+  </ul>
   <style>
-    .skills-box {
-      height: var(--h);
-      overflow-x: hidden;
-      mask-image: linear-gradient(to right, transparent, #000 10% 90%, transparent);
-      & > .skills {
-        position: relative;
-        min-width: calc(var(--w) * var(--q));
-        width: 100%;
-        display: block;
-        & > .skills-item {
-          --s: 10s;
-          position: absolute;
-          left: 100%;
-          width: var(--w);
-          height: var(--h);
-          display: grid;
-          place-content: center;
-          background-color: var(--sdcolor);
-          border-radius: var(--border-sm);
-          animation: autoRun var(--s) linear infinite;
-          animation-delay: calc((var(--s) / var(--q)) * (var(--p) - 1) - var(--s)) !important;
-          & > svg {
-            width: 24px;
-            height: 24px;
-            fill: currentColor;
-          }
+    .skills {
+      --space: 0.75rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: var(--space);
+      & > .skills-item {
+        padding: var(--space);
+        background-color: var(--sdcolor);
+        border-radius: var(--border-sm);
+        & > svg {
+          width: 24px;
+          height: 24px;
+          fill: currentColor;
         }
-      }
-    }
-
-    @media (min-width: 480px) {
-      .skills-box {
-        --w: 70px !important;
-      }
-    }
-
-    @media (min-width: 576px) {
-      .skills-box {
-        --w: 90px !important;
-      }
-    }
-
-    @media (min-width: 768px) {
-      .skills-box {
-        --w: 100px !important;
-      }
-    }
-
-    @keyframes autoRun {
-      100% {
-        left: calc(var(--w) * -1);
       }
     }
   </style>
