@@ -1,7 +1,6 @@
 <section>
   {{ set title = "Proyectos" }}
   {{ include "components/ui/headline.vto" { title } }}
-
   <div class="wrapper">
     {{ for project of data.projects }}
     {{ include "components/ui/card.vto" { project } }}

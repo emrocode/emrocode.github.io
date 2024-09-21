@@ -1,6 +1,13 @@
 <article class="card">
   <figure class="card-image">
-    <img src="{{ project.image }}" alt="Icono de {{ project.title }}" />
+    <picture>
+      <source type="image/webp" srcset="{{ project.image }}.webp" />
+      <source type="image/png" srcset="{{ project.image }}.png" />
+      <img
+        src="{{ project.image }}.png"
+        onerror="this.onerror=null; this.remove();"
+        alt="Icono de {{ project.title }}" />
+    </picture>
   </figure>
   <div class="card-body">
     <h3 class="card-title">
@@ -34,7 +41,7 @@
       padding: 2px;
       background-color: var(--accolor);
       border-radius: var(--border-sm);
-      & > img {
+      & img {
         width: 100%;
         height: 100%;
         object-fit: contain;
