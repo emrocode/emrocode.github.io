@@ -1,6 +1,6 @@
 @font-face {
   font-display: swap;
-  font-family: "Noto\\ Sans";
+  font-family: "Noto Sans";
   font-style: normal;
   font-weight: 400;
   src: url("/fonts/noto-sans-v36-latin-regular.eot");
@@ -13,7 +13,7 @@
 
 @font-face {
   font-display: swap;
-  font-family: "Noto\\ Sans";
+  font-family: "Noto Sans";
   font-style: normal;
   font-weight: 700;
   src: url("/fonts/noto-sans-v36-latin-700.eot");
@@ -25,7 +25,7 @@
 }
 
 :root {
-  --font-sans: "Noto\\ Sans", "Segoe UI", "Ubuntu", -apple-system, system-ui, sans-serif;
+  --font-sans: "Noto Sans", "Segoe UI", "Ubuntu", -apple-system, system-ui, sans-serif;
   --font-code: "Inconsolata", "Consolas", "Menlo", "Liberation Mono", monospace;
   --font-xs: 12px;
   --font-sm: 14px;
@@ -131,7 +131,7 @@ svg {
 .wrapper {
   --space: 1.25rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(calc(var(--max-w) / 3), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(calc(var(--max-w) / 2.5), 1fr));
   gap: var(--space);
   &.block {
     grid-template-columns: auto;
