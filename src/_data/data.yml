@@ -5,6 +5,7 @@ about:
   name: Emilio Romero
   username: emrocode
   email: mailto:emrocode@gmail.com
+  resume: https://read.cv/emrocode
   summary: Desarrollador web en Paraguay 🇵🇾, estudiante de Ing. Informática 🎓, apasionado por las tecnologías modernas y la creación de soluciones web innovadoras
 profiles:
   - platform: LinkedIn
@@ -18,12 +19,14 @@ projects:
     url: https://github.com/emrocode/guarani-myths-api
     title: Mitos Guaraníes
     description: RESTful API sobre los siete mitos guaranies, su historia e imágenes relacionadas
+    image: /media/projects/gmyths.png
     technologies:
       - Express
   - createdAt: 2022-11-25T13:57:23Z
     url: https://github.com/emrocode/darkify-js
     title: Darkify JS
     description: Librería sencilla para implementar un modo oscuro en cualquier sitio web
+    image: /media/projects/darkify.png
     technologies:
       - TypeScript
       - Rollupdotjs
