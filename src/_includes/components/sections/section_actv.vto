@@ -1,10 +1,48 @@
 <section>
   {{ set title = "Contribuciones" }}
   {{ include "components/ui/headline.vto" { title } }}
-
   <div class="wrapper block">
-    {{ for activity of data.activities }}
-    {{ include "components/ui/overview.vto" { activity } }}
+    {{ for actv of data.activities }}
+    <article class="actv">
+      <div>
+        <h3 class="actv-title">
+          {{ actv.title }}
+        </h3>
+        <a
+          class="actv-link"
+          href="{{ actv.url }}"
+          >{{ `@${actv.repository.owner}/${actv.repository.name}` }}</a
+        >
+      </div>
+      <p class="actv-description">{{ actv.description }}</p>
+    </article>
     {{ /for }}
   </div>
+  <style>
+    .actv {
+      --space: 0.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: var(--space);
+    }
+
+    .actv-title {
+      font-size: var(--font-mx);
+      font-weight: bold;
+    }
+
+    .actv-link {
+      font-size: var(--font-md);
+      font-weight: bold;
+      color: var(--ttcolor);
+      &:is(:hover, :focus) {
+        color: inherit;
+      }
+    }
+
+    .actv-description {
+      font-size: var(--font-sm);
+      text-wrap: pretty;
+    }
+  </style>
 </section>
