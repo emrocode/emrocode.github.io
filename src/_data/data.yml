@@ -21,6 +21,7 @@ projects:
     description: RESTful API sobre los siete mitos guaranies, su historia e imágenes relacionadas
     image: /media/projects/gmyths
     technologies:
+      - Vercel
       - Express
   - createdAt: 2022-11-25T13:57:23Z
     url: https://github.com/emrocode/darkify-js
