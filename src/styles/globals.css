@@ -139,7 +139,6 @@ svg {
 }
 
 .button {
-  max-width: max-content;
   font-family: inherit;
   font-size: inherit;
   display: block;
