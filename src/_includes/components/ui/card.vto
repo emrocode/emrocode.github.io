@@ -50,6 +50,12 @@
       }
     }
 
+    .card-body {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
     .card-title {
       font-size: var(--font-mx);
       font-weight: bold;
@@ -62,6 +68,7 @@
     }
 
     .card-description {
+      flex: 1;
       font-size: var(--font-sm);
       text-wrap: pretty;
     }
