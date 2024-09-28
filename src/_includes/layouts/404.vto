@@ -1,0 +1,47 @@
+---
+layout: layouts/base.vto
+---
+
+<section>
+  <div class="error">
+    <h1 class="error-title">4<em>0</em>4</h1>
+    <p class="error-description">¡Ups! Esta paǵina no está disponible</p>
+    <a href="/" class="button error-button">Volver al inicio</a>
+  </div>
+  <style>
+    .error {
+      display: grid;
+      place-items: center;
+      text-align: center;
+    }
+
+    .error-title {
+      width: 100%;
+      font-size: clamp(var(--headline-3), 6vw, var(--headline-2));
+      font-weight: bold;
+      line-height: normal;
+      letter-spacing: -0.08rem;
+      & > em {
+        font-style: oblique;
+        color: var(--accolor);
+      }
+    }
+
+    .error-description {
+      width: 100%;
+      margin-top: 0.25rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .error-button {
+      width: 100%;
+      padding: 0.5rem 1rem;
+      color: var(--sdcolor);
+      background-color: var(--accolor);
+      border-radius: var(--border-xx);
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  </style>
+</section>
