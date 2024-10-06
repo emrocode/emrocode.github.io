@@ -1,10 +1,10 @@
 {
   "imports": {
-    "lume/": "https://deno.land/x/lume@v2.2.1/",
-    "lume/icons/": "https://deno.land/x/lume_icon_plugins@v0.2.3/"
+    "lume/": "https://deno.land/x/lume@v2.2.4/",
+    "lume/icons/": "https://deno.land/x/lume_icon_plugins@v0.2.4/"
   },
   "tasks": {
-    "lume": "echo \"import 'lume/cli.ts'\" | deno run -A -",
+    "lume": "echo \"import 'lume/cli.ts'\" | DENO_DIR=_vendor deno run -A -",
     "build": "deno task lume",
     "serve": "deno task lume -s -w"
   },
