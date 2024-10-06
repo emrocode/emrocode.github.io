@@ -1,8 +1,14 @@
 <section>
   <div class="hero">
-    <h1 class="hero-title">{{ data.about.name }}</h1>
-    <p class="hero-summary">{{ data.about.summary }}</p>
-    <a class="button hero-button" href="{{ data.about.email }}">Contactar</a>
+    <h1 class="hero-title">{{ about.name }}</h1>
+    <p class="hero-summary">{{ about.summary }}</p>
+    {{ include "components/ui/button.vto"
+      {
+        url: about.email,
+        text: "Contactar",
+        variant: "primary"
+      }
+    }}
   </div>
   <style>
     .hero {
@@ -26,17 +32,6 @@
       text-wrap: pretty;
       margin-top: 0.25rem;
       margin-bottom: 1.25rem;
-    }
-
-    .hero-button {
-      width: 100%;
-      padding: 0.5rem 1rem;
-      color: var(--sdcolor);
-      background-color: var(--accolor);
-      border-radius: var(--border-xx);
-      &:hover {
-        opacity: 0.8;
-      }
     }
   </style>
 </section>

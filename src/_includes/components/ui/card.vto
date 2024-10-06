@@ -1,10 +1,10 @@
 <article class="card">
   <figure class="card-image">
     <picture>
-      <source type="image/webp" srcset="{{ project.image }}.webp" />
-      <source type="image/png" srcset="{{ project.image }}.png" />
+      <source type="image/webp" srcset="/media/projects/{{ project.imageId }}.webp" />
+      <source type="image/png" srcset="/media/projects/{{ project.imageId }}.png" />
       <img
-        src="{{ project.image }}.png"
+        src="/media/projects/{{ project.imageId }}.png"
         onerror="this.onerror=null; this.remove();"
         alt="Icono de {{ project.title }}" />
     </picture>

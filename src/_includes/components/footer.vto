@@ -2,7 +2,7 @@
   <div class="footer container">
     <div>
       <p>
-        &copy; {{ date.getFullYear() }} {{ data.about.name }} &lpar;{{ data.about.username }}&rpar;
+        &copy; {{ date.getFullYear() }} {{ about.name }} &lpar;{{ about.username }}&rpar;
       </p>
       <p>
         Creado con
@@ -11,7 +11,7 @@
       </p>
     </div>
     <ul class="menu">
-      {{ for profile of data.profiles }}
+      {{ for profile of profiles }}
       <li class="menu-item">
         <a href="{{ profile.url }}" class="menu-link">
           {{ profile.platform }}

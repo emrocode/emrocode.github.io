@@ -4,7 +4,7 @@
   {{ set skills = ["React","Nextdotjs","Django","Tailwindcss","Express","Nodedotjs","PostgreSQL"] }}
   <ul class="skills">
     {{ for skill of skills }}
-    <li class="skills-item">
+    <li class="skill">
       {{ skill.toLowerCase() |> simpleicons }}
     </li>
     {{ /for }}
@@ -16,15 +16,10 @@
       flex-wrap: wrap;
       justify-content: center;
       gap: var(--space);
-      & > .skills-item {
+      & > .skill {
         padding: var(--space);
         background-color: var(--sdcolor);
         border-radius: var(--border-sm);
-        & > svg {
-          width: 24px;
-          height: 24px;
-          fill: currentColor;
-        }
       }
     }
   </style>

@@ -7,13 +7,13 @@
         <img
           src="/media/avatar.png"
           onerror="this.onerror=null; this.remove();"
-          alt="Avatar de {{ data.about.name }}" />
+          alt="Avatar de {{ about.name }}" />
       </picture>
-      <span>{{ data.about.username }}</span>
+      <span>{{ about.username }}</span>
     </a>
     <!-- social links -->
     <ul class="menu">
-      {{ for profile of data.profiles |> slice(0,3) }}
+      {{ for profile of profiles |> slice(0,3) }}
       <li class="menu-item">
         <a href="{{ profile.url }}" class="menu-link">
           {{ include `icons/${profile.platform.toLowerCase()}.svg` }}

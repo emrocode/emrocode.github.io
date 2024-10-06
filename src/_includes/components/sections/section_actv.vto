@@ -1,8 +1,8 @@
 <section>
   {{ set title = "Contribuciones" }}
   {{ include "components/ui/headline.vto" { title } }}
-  <div class="wrapper block">
-    {{ for actv of data.activities }}
+  <div class="wrapper block" id="contact">
+    {{ for actv of activities }}
     <article class="actv">
       <div>
         <h3 class="actv-title">

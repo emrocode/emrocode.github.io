@@ -1,7 +1,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="{{ data.meta.description }}" />
+  <meta name="description" content="{{ meta.description }}" />
   <!-- preload fonts -->
   <link
     rel="preload"
@@ -20,5 +20,5 @@
   <link rel="stylesheet" href="/styles/neutralize.css" />
   <link rel="stylesheet" href="/styles/globals.css" />
   <script src="/scripts/main.ts"></script>
-  <title>{{ title ? `${title} &middot; ${data.meta.title}` : data.meta.title }}</title>
+  <title>{{ title ? `${title} &middot; ${meta.title}` : meta.title }}</title>
 </head>
