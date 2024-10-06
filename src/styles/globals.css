@@ -53,11 +53,11 @@
   --border-lightness: 0%;
   --alpha: 0.125;
 
-  --pmcolor: hsl(var(--accent-hue), 50%, 94%);
-  --sdcolor: hsl(var(--accent-hue), 50%, 90%);
-  --ttcolor: hsl(var(--accent-hue), 25%, 24%);
+  --pmcolor: hsl(var(--accent-hue), 25%, 94%);
+  --sdcolor: hsl(var(--accent-hue), 25%, 90%);
+  --ttcolor: hsl(var(--accent-hue), 16%, 24%);
   --qtcolor: hsl(var(--accent-hue), 50%, 16%);
-  --qncolor: hsl(var(--accent-hue), 50%, 8%);
+  --qncolor: hsl(var(--accent-hue), 50%, 12%);
 
   --accolor: hsl(var(--accent-hue), 50%, var(--accent-lightness));
   --bdcolor: hsla(var(--accent-hue), 0%, var(--border-lightness), var(--alpha));
@@ -69,8 +69,8 @@
   --accent-lightness: 60%;
   --border-lightness: 100%;
 
-  --pmcolor: hsl(var(--accent-hue), 16%, 12%);
-  --sdcolor: hsl(var(--accent-hue), 16%, 16%);
+  --pmcolor: hsl(var(--accent-hue), 12%, 12%);
+  --sdcolor: hsl(var(--accent-hue), 12%, 16%);
   --ttcolor: hsl(var(--accent-hue), 25%, 72%);
   --qtcolor: hsl(var(--accent-hue), 50%, 96%);
   --qncolor: hsl(var(--accent-hue), 50%, 92%);
@@ -85,7 +85,6 @@ body {
   text-rendering: optimizeSpeed;
   color: var(--qncolor);
   background-color: var(--pmcolor);
-  overflow-x: hidden;
   display: grid;
   grid:
     "header" auto
@@ -94,13 +93,22 @@ body {
     / 1fr;
 }
 
+@supports (scrollbar-width: auto) {
+  html,
+  body {
+    scrollbar-width: thin;
+    scrollbar-gutter: stable both-edges;
+    scrollbar-color: var(--accolor) var(--sdcolor);
+  }
+}
+
 main {
   grid-area: main;
 }
 
 section {
-  margin-top: clamp(1.75rem, 14vmax, var(--nav-h));
-  margin-bottom: calc(var(--nav-h) * 1.75);
+  margin-top: clamp(1.75rem, 14vmax, calc(var(--nav-h) * 1.5));
+  margin-bottom: calc(var(--nav-h) * 2);
 }
 
 a {
@@ -116,9 +124,11 @@ a {
   }
 }
 
-img,
 svg {
+  width: 24px;
+  height: 24px;
   display: block;
+  fill: currentColor;
 }
 
 /* utils */
@@ -130,6 +140,7 @@ svg {
 
 .wrapper {
   --space: 1.25rem;
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(calc(var(--max-w) / 2.5), 1fr));
   gap: var(--space);
