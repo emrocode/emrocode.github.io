@@ -30,11 +30,3 @@ projects:
     technologies:
       - TypeScript
       - Rollupdotjs
-activities:
-  - createdAt: 2024-03-13T13:29:27Z
-    repository:
-      owner: midudev
-      name: la-velada-web-oficial
-    url: https://github.com/midudev/la-velada-web-oficial/pull/482
-    title: La Velada IV
-    description: Transformación del componente footer hacia su versión final y optimizada
