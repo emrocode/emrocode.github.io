@@ -1,9 +1,7 @@
 <footer>
   <div class="footer container">
     <div>
-      <p>
-        &copy; {{ date.getFullYear() }} {{ about.name }} &lpar;{{ about.username }}&rpar;
-      </p>
+      <p>&copy; {{ date.getFullYear() }} {{ about.name }} &lpar;{{ about.username }}&rpar;</p>
       <p>
         Creado con
         <a href="https://lume.land/" class="link">Lume</a>, desplegado en
@@ -24,6 +22,7 @@
     footer {
       padding: calc(var(--nav-h) / 2) 0;
       grid-area: footer;
+      background: var(--sdcolor);
     }
 
     .footer {
