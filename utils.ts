@@ -1,4 +1,4 @@
-const env = (key: string) => {
+export const env = (key: string): string => {
   try {
     const value = Deno.env.get(key);
     if (!value) {
@@ -6,9 +6,7 @@ const env = (key: string) => {
     }
     return value;
   } catch (error) {
-    console.log(error.message);
+    console.log(error);
     return "";
   }
 };
-
-export { env };

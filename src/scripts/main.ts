@@ -11,8 +11,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const knowledgeBase = document.querySelectorAll(".skill");
   const sr = ScrollReveal();
 
-  knowledgeBase.forEach((card, i) => {
-    sr.reveal(card, {
+  knowledgeBase.forEach((el, i) => {
+    sr.reveal(el, {
       origin: "bottom",
       distance: "15px",
       duration: 500,

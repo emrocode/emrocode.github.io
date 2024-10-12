@@ -1,13 +1,14 @@
 {
   "imports": {
-    "lume/": "https://deno.land/x/lume@v2.2.4/",
+    "lume/": "https://deno.land/x/lume@v2.3.3/",
     "lume/icons/": "https://deno.land/x/lume_icon_plugins@v0.2.4/"
   },
   "tasks": {
-    "lume": "echo \"import 'lume/cli.ts'\" | DENO_DIR=_vendor deno run -A -",
+    "lume": "echo \"import 'lume/cli.ts'\" | deno run -A -",
     "build": "deno task lume",
     "serve": "deno task lume -s -w"
   },
+  "nodeModulesDir": "auto",
   "compilerOptions": {
     "types": ["lume/types.ts"]
   }
