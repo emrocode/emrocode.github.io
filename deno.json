@@ -1,0 +1,17 @@
+{
+  "imports": {
+    "lume/": "https://deno.land/x/lume@v2.4.3/",
+    "lume/icons/": "https://deno.land/x/lume_icon_plugins@v0.2.4/"
+  },
+  "tasks": {
+    "lume": "echo \"import 'lume/cli.ts'\" | DENO_DIR=_vendor deno run -A -",
+    "clean": "rm -rf dist",
+    "format": "dprint fmt",
+    "build": "deno task lume",
+    "serve": "deno task lume -s -w"
+  },
+  "nodeModulesDir": "auto",
+  "compilerOptions": {
+    "types": ["lume/types.ts"]
+  }
+}

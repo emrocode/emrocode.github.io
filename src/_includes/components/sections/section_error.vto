@@ -1,0 +1,35 @@
+<section>
+  <div class="error">
+    <h1 class="error-title">{{ error_code }}</h1>
+    <p class="error-message">{{ title }}</p>
+    {{
+      include "components/ui/button.vto" {
+        url: "/",
+        text: "Volver al inicio",
+        variant: "primary",
+        icon: "arrow-left",
+        iconPosition: "start",
+      }
+    }}
+  </div>
+  <style>
+  .error {
+    display: grid;
+    place-items: center;
+    text-align: center;
+  }
+
+  .error-title {
+    width: 100%;
+    font-size: clamp(var(--headline-3), 6vw, var(--headline-2));
+    font-weight: bold;
+    line-height: normal;
+  }
+
+  .error-message {
+    width: 100%;
+    margin-top: 0.25rem;
+    margin-bottom: 1.25rem;
+  }
+  </style>
+</section>

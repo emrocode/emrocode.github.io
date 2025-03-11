@@ -1,0 +1,49 @@
+name: Publish website
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup deno environment
+        uses: denoland/setup-deno@v2
+        with:
+          deno-version: v2.x
+
+      - name: Build the website
+        run: |
+          BASE_URL=${{ secrets.BASE_URL }} \
+          REMOTE_FILE_ID=${{ secrets.REMOTE_FILE_ID }} \
+          REMOTE_FILE_URL=${{ secrets.REMOTE_FILE_URL }} \
+          deno task build
+
+      - name: Setup the website
+        uses: actions/configure-pages@v5
+
+      - name: Upload the website
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "dist"
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy the website
+        id: deployment
+        uses: actions/deploy-pages@v4

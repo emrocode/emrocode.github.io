@@ -1,0 +1,36 @@
+<section>
+  {{ set title = "Habilidades" }}
+  {{ include "components/ui/headline.vto" { title } }}
+  {{
+    set skills = [
+      "React",
+      "Nextdotjs",
+      "Django",
+      "Tailwindcss",
+      "Express",
+      "Nodedotjs",
+      "PostgreSQL",
+    ]
+  }}
+  <ul class="skills">
+    {{ for skill of skills }}
+      <li class="skill">
+        {{ skill.toLowerCase() |> simpleicons }}
+      </li>
+    {{ /for }}
+  </ul>
+  <style>
+  .skills {
+    --space: 0.75rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space);
+    & > .skill {
+      padding: var(--space);
+      background-color: var(--sdcolor);
+      border-radius: var(--border-sm);
+    }
+  }
+  </style>
+</section>

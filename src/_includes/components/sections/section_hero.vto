@@ -1,0 +1,39 @@
+<section>
+  <div class="hero">
+    <h1 class="hero-title">{{ about.name }}</h1>
+    <p class="hero-summary">{{ about.summary |> ms }}</p>
+    {{
+      include "components/ui/button.vto" {
+        url: "#contact",
+        text: "Contactar",
+        variant: "primary",
+      }
+    }}
+  </div>
+  <style>
+  .hero {
+    display: grid;
+    place-items: center;
+    text-align: center;
+  }
+
+  .hero-title {
+    width: 100%;
+    font-size: clamp(var(--headline-3), 6vw, var(--headline-2));
+    font-weight: bold;
+    line-height: normal;
+    letter-spacing: -0.08rem;
+  }
+
+  .hero-summary {
+    max-width: calc(var(--max-w) / 1.25);
+    width: 100%;
+    text-wrap: pretty;
+    margin-top: 0.25rem;
+    margin-bottom: 1.25rem;
+    & > span {
+      color: var(--accolor);
+    }
+  }
+  </style>
+</section>

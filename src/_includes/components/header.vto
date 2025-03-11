@@ -1,0 +1,78 @@
+<header class="header">
+  <nav class="nav container">
+    <a href="/" class="nav-brand">
+      <picture>
+        <source type="image/webp" srcset="/media/avatar.webp" />
+        <source type="image/png" srcset="/media/avatar.png" />
+        <img
+          src="/media/avatar.png"
+          onerror="this.onerror=null; this.remove();"
+          draggable="false"
+          alt="Avatar de {{ about.name }}"
+        />
+      </picture>
+    </a>
+    <!-- menu -->
+    <ul class="menu">
+      {{ for profile of profiles |> slice(0,3) }}
+        <li class="menu-item">
+          <a href="{{ profile.url }}" class="menu-link">
+            {{ include `icons/${profile.platform.toLowerCase()}.svg` }}
+          </a>
+        </li>
+      {{ /for }}
+      <li class="menu-item">
+        <button type="button" id="dTheme" class="button menu-link">
+          {{ include "icons/routine.svg" }}
+        </button>
+      </li>
+    </ul>
+  </nav>
+  <style>
+  .header {
+    grid-area: header;
+  }
+
+  .nav {
+    height: var(--nav-h);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    & > .nav-brand {
+      display: flex;
+      align-items: center;
+      column-gap: 0.75rem;
+      & img {
+        width: 36px;
+        height: 36px;
+        padding: 2px;
+        display: block;
+        background-color: var(--accolor);
+        border-radius: var(--border-xx);
+      }
+    }
+  }
+
+  .menu,
+  .hero-menu {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    column-gap: 0.25rem;
+  }
+
+  .menu-link {
+    padding: 0.25rem;
+    display: block;
+    border-radius: var(--border-sm);
+    &:hover {
+      background-color: var(--sdcolor);
+    }
+  }
+
+  .menu-link > svg {
+    width: 26px;
+    height: 26px;
+  }
+  </style>
+</header>

@@ -1,0 +1,40 @@
+<a href="{{ url }}" class="button btn {{ variant }} {{ iconPosition }}">
+  {{ if iconPosition === "start" }}
+    {{ icon |> heroicons }}
+  {{ /if }}
+
+  {{ text }}
+
+  {{ if iconPosition === "end" || !iconPosition }}
+    {{ icon |> heroicons }}
+  {{ /if }}
+  <style>
+  .btn {
+    width: 100%;
+    padding: 0.525rem 1.25rem;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 0.525rem;
+    border-radius: var(--border-xx);
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  .btn > svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .primary {
+    color: var(--sdcolor);
+    background-color: var(--accolor);
+  }
+
+  .secondary {
+    color: var(--qncolor);
+    background-color: var(--sdcolor);
+  }
+  </style>
+</a>

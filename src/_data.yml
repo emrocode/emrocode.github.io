@@ -1,0 +1,35 @@
+meta:
+  title: Emilio Romero
+  description: Desarrollador web frontend, especializado en soluciones digitales que optimizan la experiencia de usuario.
+about:
+  name: Emilio Romero
+  username: emrocode
+  job_title: FrontEnd Developer
+  email: emrocode@gmail.com
+  summary: Desarrollador web, [especializado en frontend]. Entusiasta de tecnologías modernas y soluciones web innovadoras
+profiles:
+  - platform: LinkedIn
+    url: https://linkedin.com/in/emrocode
+  - platform: GitHub
+    url: https://github.com/emrocode
+  - platform: CodePen
+    url: https://codepen.io/emrocode
+projects:
+  - created_at: 2022-11-14T20:54:31Z
+    url: https://github.com/emrocode/guarani-myths-api
+    title: Mitos Guaraníes
+    description: RESTful API sobre los siete mitos guaranies, su historia e imágenes relacionadas
+    is_archived: true
+    image_id: gmyths
+    technologies:
+      - Vercel
+      - Express
+  - created_at: 2022-11-25T13:57:23Z
+    url: https://github.com/emrocode/darkify-js
+    title: Darkify JS
+    description: Librería sencilla para implementar un modo oscuro en cualquier sitio web
+    is_archived: false
+    image_id: darkify
+    technologies:
+      - TypeScript
+      - Rollupdotjs
