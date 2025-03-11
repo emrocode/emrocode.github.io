@@ -24,8 +24,8 @@ jobs:
       - name: Build the website
         run: |
           BASE_URL=${{ secrets.BASE_URL }} \
-          REMOTE_FILE_ID=${{ secrets.REMOTE_FILE_ID }} \
-          REMOTE_FILE_URL=${{ secrets.REMOTE_FILE_URL }} \
+          LOCAL_CSS_RESET_PATH=${{ secrets.LOCAL_CSS_RESET_PATH }} \
+          REMOTE_CSS_RESET_URL=${{ secrets.REMOTE_CSS_RESET_URL }} \
           deno task build
 
       - name: Setup the website
