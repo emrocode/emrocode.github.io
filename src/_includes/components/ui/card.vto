@@ -41,7 +41,6 @@
     --img_size: 48px;
     position: relative;
     display: grid;
-    grid-template-columns: var(--img_size) 1fr;
     gap: var(--space);
     padding: var(--space);
     background-color: var(--sdcolor);
@@ -50,6 +49,10 @@
     &:is(:focus, :hover) {
       transform: translateY(-0.25rem);
     }
+  }
+
+  .card:has(.card-image) {
+    grid-template-columns: var(--img_size) 1fr;
   }
 
   .card-image {

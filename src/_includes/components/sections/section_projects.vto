@@ -1,12 +1,13 @@
 <section>
   {{ set title = "Proyectos" }}
-  {{ include "components/ui/headline.vto" { title } }}
+  {{ set icon = "folder-open" }}
+  {{ include "components/ui/headline.vto" { title, icon } }}
   <div class="projects-box">
     <div class="wrapper">
       {{
         for project of projects
         |> sort((a, b) => new Date(b.created_at) - new Date(a.created_at))
-        |> slice(0,2)
+        |> slice(0, 2)
       }}
         {{ include "components/ui/card.vto" { project } }}
       {{ /for }}
@@ -16,7 +17,7 @@
         url: "https://github.com/emrocode/?tab=repositories",
         text: "Más proyectos",
         variant: "primary",
-        icon: "arrow-right",
+        icon: "arrow-up-right",
       }
     }}
   </div>

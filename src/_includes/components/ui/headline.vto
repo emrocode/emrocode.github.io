@@ -1,13 +1,17 @@
 <h2 class="headline">
-  {{ title }}
+  <div class="headline-icon">
+    {{ icon |> heroicons() }}
+  </div>
+  <span>{{ title }}</span>
 </h2>
 <style>
 .headline {
-  --gap: var(--nav-h);
-  margin-bottom: calc(var(--nav-h) / 2);
+  --gap: 3rem;
+  margin-bottom: 2rem;
   color: var(--qncolor);
   display: flex;
   align-items: center;
+  column-gap: 0.525rem;
 }
 
 .headline:before,

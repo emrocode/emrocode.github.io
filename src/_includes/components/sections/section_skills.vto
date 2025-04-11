@@ -1,6 +1,7 @@
 <section>
   {{ set title = "Habilidades" }}
-  {{ include "components/ui/headline.vto" { title } }}
+  {{ set icon = "fire" }}
+  {{ include "components/ui/headline.vto" { title, icon } }}
   {{
     set skills = [
       "React",
