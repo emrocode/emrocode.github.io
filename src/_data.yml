@@ -5,6 +5,7 @@ about:
   name: Emilio Romero
   username: emrocode
   job_title: FrontEnd Developer
+  location: Paraguay
   email: emrocode@gmail.com
   summary: Desarrollador web, [especializado en frontend]. Entusiasta de tecnologías modernas y soluciones web innovadoras
 profiles:
@@ -22,14 +23,12 @@ projects:
     is_archived: true
     image_id: gmyths
     technologies:
-      - Vercel
       - Express
   - created_at: 2022-11-25T13:57:23Z
     url: https://github.com/emrocode/darkify-js
     title: Darkify JS
     description: Librería sencilla para implementar un modo oscuro en cualquier sitio web
-    is_archived: false
     image_id: darkify
     technologies:
       - TypeScript
-      - Rollupdotjs
+      - Jest
