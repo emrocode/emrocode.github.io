@@ -2,4 +2,3 @@
 {{ include `components/sections/${prefix}hero.vto` }}
 {{ include `components/sections/${prefix}skills.vto` }}
 {{ include `components/sections/${prefix}projects.vto` }}
-{{ include `components/sections/${prefix}contact.vto` }}
