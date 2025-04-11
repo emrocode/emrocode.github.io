@@ -9,7 +9,7 @@
     "whitespaceSensitivity": "ignore"
   },
   "yaml": {},
-  "excludes": ["**/node_modules", "dist"],
+  "includes": ["src/**/*"],
   "plugins": [
     "https://plugins.dprint.dev/biome-0.7.1.wasm",
     "https://plugins.dprint.dev/g-plane/malva-v0.11.2.wasm",
