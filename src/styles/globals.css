@@ -61,10 +61,10 @@
   --pmcolor: hsl(var(--accent-hue), 25%, 94%);
   --sdcolor: hsl(var(--accent-hue), 25%, 90%);
   --ttcolor: hsl(var(--accent-hue), 16%, 24%);
-  --qtcolor: hsl(var(--accent-hue), 50%, 16%);
-  --qncolor: hsl(var(--accent-hue), 50%, 12%);
+  --qtcolor: hsl(var(--accent-hue), 12%, 16%);
+  --qncolor: hsl(var(--accent-hue), 12%, 12%);
 
-  --accolor: hsl(var(--accent-hue), 50%, var(--accent-lightness));
+  --accolor: hsl(var(--accent-hue), 40%, var(--accent-lightness));
   --bdcolor: hsla(var(--accent-hue), 0%, var(--border-lightness), var(--alpha));
   --emphasize: hsla(
     var(--accent-hue),
