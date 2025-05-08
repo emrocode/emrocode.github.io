@@ -1,0 +1,88 @@
+<div class="wrapper block list">
+  <div class="list-header">
+    <div class="list-header--title">Año</div>
+    <div class="list-header--title">Nombre</div>
+    <div class="list-header--title hide-on-mobile">Creado con</div>
+    <div class="list-header--title">Links</div>
+  </div>
+  <div class="list-body">
+    {{
+      for repo of gh.reposToShow
+      |> sort((a,b) => new Date(b.created_at) - new Date(a.created_at) )
+    }}
+      <div class="list-body--item year">
+        {{ repo.created_at |> date("yyyy") }}
+      </div>
+      <div class="list-body--item title">{{ repo.name }}</div>
+      <div class="list-body--item hide-on-mobile">
+        {{ if !repo.is_archived }}
+          {{ for tech of repo.topics |> sort() }}
+            <span class="tech">{{ tech |> simpleicons }}</span>
+          {{ /for }}
+        {{ else }}
+          <span>&ndash;</span>
+        {{ /if }}
+      </div>
+      <div class="list-body--item links">
+        {{ if repo.url && !repo.is_private }}
+          <a class="list-body--link" href="{{ repo.url }}">
+            {{ "github" |> simpleicons }}
+          </a>
+        {{ /if }}
+        {{ if repo.html_url }}
+          <a class="list-body--link" href="{{ repo.html_url }}">
+            {{ "arrow-up-right" |> heroicons }}
+          </a>
+        {{ /if }}
+      </div>
+    {{ /for }}
+  </div>
+</div>
+<style>
+.list-header,
+.list-body {
+  --space: 2rem;
+  display: grid;
+  column-gap: var(--space);
+  grid-template-columns: auto 1fr 1fr auto;
+}
+
+.list-header {
+  font-size: 100%;
+  font-weight: bold;
+  color: var(--ttcolor);
+}
+
+.list-body--item {
+  padding-top: 1rem;
+  display: flex;
+  align-items: center;
+  column-gap: 0.25rem;
+  font-size: var(--font-sm);
+  & svg {
+    width: var(--font-lg);
+    height: var(--font-lg);
+    fill: currentColor;
+  }
+}
+
+.list-body--item.links {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.list-body--item.year {
+  color: var(--accolor);
+}
+
+@media (max-width: 576px) {
+  .list-header,
+  .list-body {
+    grid-template-columns: auto 1fr auto;
+  }
+
+  .hide-on-mobile {
+    display: none;
+  }
+}
+</style>
