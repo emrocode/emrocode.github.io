@@ -43,6 +43,7 @@
   --headline-2: 2.75rem;
   --headline-3: 2.25rem;
   --headline-4: 1.75rem;
+  --headline-5: 1.5rem;
 
   --max-w: 40rem;
   --nav-h: 4rem;
@@ -119,7 +120,7 @@ section {
   margin-top: clamp(1.75rem, 14vmax, calc(var(--nav-h) * 1.25));
   margin-bottom: calc(var(--nav-h) * 2);
   &:where([data-page="true"]) {
-    margin-top: clamp(1.75rem, 14vmax, calc(var(--nav-h) * 0.25));
+    margin-top: clamp(1.75rem, 14vmax, calc(var(--nav-h) * 0.75));
   }
 }
 
@@ -159,6 +160,7 @@ svg {
   gap: var(--space);
   &.block {
     grid-template-columns: auto;
+    --space: 0.25rem;
   }
 }
 
