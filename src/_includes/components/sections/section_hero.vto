@@ -1,12 +1,6 @@
 <section>
   <div class="hero">
     <h1 class="hero-title">{{ about.name }}</h1>
-    <div class="hero-info">
-      <div class="hero-info--location">
-        <div>{{ "map-pin" |> heroicons() }}</div>
-        <span>{{ about.location }}</span>
-      </div>
-    </div>
     <p class="hero-summary">{{ about.summary |> ms }}</p>
     {{
       include "components/ui/button.vto" {
@@ -23,15 +17,6 @@
     font-weight: bold;
     line-height: normal;
     letter-spacing: -0.08rem;
-  }
-
-  .hero-info {
-    padding: 0.525rem 0 0.25rem 0;
-    & > .hero-info--location {
-      display: flex;
-      align-items: center;
-      column-gap: 0.5rem;
-    }
   }
 
   .hero-summary {

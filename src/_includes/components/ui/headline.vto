@@ -1,32 +1,48 @@
-<h2 class="headline">
-  <div class="headline-icon">
-    {{ icon |> heroicons() }}
+<div class="headline" data-page="{{ page.data.url !== '/' && true }}">
+  {{ if icon }}
+    <div class="headline-icon">
+      {{ icon |> heroicons() }}
+    </div>
+  {{ /if }}
+  <div>
+    <h2>{{ title }}</h2>
+    {{ if description }}
+      <p>{{ description }}</p>
+    {{ /if }}
   </div>
-  <span>{{ title }}</span>
-</h2>
-<style>
-.headline {
-  --gap: 3rem;
-  margin-bottom: 2rem;
-  color: var(--qncolor);
-  display: flex;
-  align-items: center;
-  column-gap: 0.525rem;
-}
 
-.headline:before,
-.headline:after {
-  content: "";
-  height: 1px;
-  background-color: var(--bdcolor);
-  flex-grow: 1;
-}
+  <style>
+  .headline {
+    --gap: 3rem;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    column-gap: 0.525rem;
+    &:is([data-page="true"]) {
+      & h2 {
+        font-size: clamp(var(--headline-4), 6vw, var(--headline-3));
+        font-weight: bold;
+        line-height: normal;
+        letter-spacing: -0.08rem;
+        margin-bottom: 0.25rem;
+      }
+    }
+  }
 
-.headline:before {
-  margin-right: var(--gap);
-}
+  .headline:not([data-page="true"]):before,
+  .headline:not([data-page="true"]):after {
+    content: "";
+    height: 1px;
+    background-color: var(--bdcolor);
+    flex-grow: 1;
+  }
 
-.headline:after {
-  margin-left: var(--gap);
-}
-</style>
+  .headline:not([data-page="true"]):before {
+    margin-right: var(--gap);
+  }
+
+  .headline:not([data-page="true"]):after {
+    margin-left: var(--gap);
+  }
+  </style>
+</div>

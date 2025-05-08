@@ -27,14 +27,25 @@
     height: 16px;
   }
 
-  .primary {
+  .primary,
+  .primary.thin {
     color: var(--sdcolor);
     background-color: var(--accolor);
   }
 
-  .secondary {
+  .secondary,
+  .secondary.thin {
     color: var(--qncolor);
     background-color: var(--sdcolor);
+  }
+
+  .thin {
+    font-size: var(--font-sm);
+    padding: 0.25rem 0.75rem;
+    & > svg {
+      width: 14px;
+      height: 14px;
+    }
   }
   </style>
 </a>

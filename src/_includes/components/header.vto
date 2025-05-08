@@ -1,6 +1,6 @@
 <header class="header">
   <nav class="nav container">
-    <a href="javascript:void(0);" class="nav-brand">
+    <a href="{{ page.data.url }}" class="nav-brand">
       <picture>
         <source type="image/webp" srcset="/media/avatar.webp" />
         <source type="image/png" srcset="/media/avatar.png" />
@@ -12,6 +12,17 @@
         />
       </picture>
     </a>
+    {{ if page.data.url !== "/" }}
+      {{
+        include "components/ui/button.vto" {
+          url: "/",
+          text: "Atrás",
+          variant: "primary thin",
+          icon: "arrow-left",
+          iconPosition: "start",
+        }
+      }}
+    {{ /if }}
     <!-- menu -->
     <ul class="menu">
       {{ for profile of profiles |> slice(0,3) }}
@@ -53,6 +64,11 @@
     }
   }
 
+  .nav > .btn {
+    margin-right: auto;
+    margin-left: 1rem;
+  }
+
   .menu,
   .hero-menu {
     display: flex;
@@ -73,6 +89,16 @@
   .menu-link > svg {
     width: 26px;
     height: 26px;
+  }
+
+  .nav-link--return {
+    padding: 0.25rem 0.75rem;
+    font-size: var(--font-sm);
+    margin-right: auto;
+    margin-left: 1.25rem;
+    color: var(--pmcolor);
+    background-color: var(--accolor);
+    border-radius: var(--border-xx);
   }
   </style>
 </header>
