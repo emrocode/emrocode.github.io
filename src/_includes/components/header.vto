@@ -1,6 +1,6 @@
 <header class="header">
   <nav class="nav container">
-    <a href="{{ page.data.url }}" class="nav-brand">
+    <a href="/" class="nav-brand">
       <picture>
         <source type="image/webp" srcset="/media/avatar.webp" />
         <source type="image/png" srcset="/media/avatar.png" />
@@ -12,17 +12,6 @@
         />
       </picture>
     </a>
-    {{ if page.data.url !== "/" }}
-      {{
-        include "components/ui/button.vto" {
-          url: "/",
-          text: "Atrás",
-          variant: "primary thin",
-          icon: "arrow-left",
-          iconPosition: "start",
-        }
-      }}
-    {{ /if }}
     <!-- menu -->
     <ul class="menu">
       {{ for profile of profiles |> slice(0,3) }}
